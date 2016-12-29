@@ -1,0 +1,31 @@
+{
+    "version": "0.1.0",
+
+    // typescript compilation command (uses the version specified in package.json)
+    "command": "${workspaceRoot}/node_modules/.bin/tsc",
+
+    // the command is a shell script
+    "isShellCommand": true,
+
+    // always show output regardless of if errors occur. 
+    "showOutput": "always",
+
+    // tell the tsc compiler to use the tsconfig.json from the current folder.
+    "args": [],
+
+    // do not add the task name as an argument to the typescript compilation command
+    "suppressTaskName": true,
+
+    "tasks": [
+        {
+            // give the task a name so we can specify the compile as a prelaunch command in launch.json
+            "taskName": "compile",
+
+            // mark it as the default build command
+            "isBuildCommand": true,
+
+            // use the standard tsc problem matcher to find compile problems in the output.
+            "problemMatcher": "$tsc"
+        }
+    ]
+}

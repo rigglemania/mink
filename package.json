@@ -1,0 +1,30 @@
+{
+  "name": "mink",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@types/core-js" : "0.9.35",
+    "@types/node": "6.0.54",
+    "@types/electron": "1.4.30",
+    "@types/lodash": "4.14.44",
+    "electron-prebuilt": "1.4.13",
+    "electron-builder": "10.13.1",
+    "tslint": "4.2.0",
+    "typescript": "2.1.4"
+  },
+  "build": {
+      "appId": "rigglemania.mink",
+      "files": [
+        "!*.ts",
+        "!*.spec.js"
+      ]
+  },
+  "scripts": {
+      "postinstall": "install-app-deps",
+      "compile": "node_modules/.bin/tsc",
+      "lint": "node_modules/.bin/tslint \"app/**/*.ts\" --exclude \"app/node_modules/**\" ",
+      "start": "electron ./app --enable-logging",
+      "dev": "NODE_ENV='development' npm run start",
+      "pack": "build --dir",
+      "dist": "build"
+  }
+}

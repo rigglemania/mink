@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {  
+            "type": "node",
+            "request": "launch",
+            "name": "Launch MINK",           
+            "env": {},
+            "cwd": "${workspaceRoot}/app",
+            "program": "${workspaceRoot}/app/window/index.js",
+            "args": [],
+            "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
+            "runtimeArgs": [
+                ".",
+                "--enable-logging"
+            ],
+            "stopOnEntry": false,
+            "sourceMaps": true
+        }
+    ]
+}

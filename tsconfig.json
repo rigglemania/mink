@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,  
+
+    // required for angular
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+
+    // necessary as current angular code fails strictNullChecks
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true
+  },
+
+  "exclude": [
+    "dist",
+    "node_modules",
+    "app/node_modules"
+  ]
+}
